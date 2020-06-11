@@ -28,7 +28,7 @@ From the frontend folder, run the following commands to start the client:
 npm install // only once to install dependencies
 npm start
 ```
-By default, the frontend will run on localhost:3000.
+By default, the frontend will run on http://localhost:3000/.
 
 ## Tests
 In order to run tests navigate to the backend folder and run the following commands:
@@ -221,7 +221,7 @@ GET /categories/{category_id}/questions
 ```
 POST /questions
  * General:
-    * Creates a new book using the submitted question, answer, category and difficulty. Returns the success value.
+    * Creates a new question using the submitted question, answer, category and difficulty. Returns the success value.
  * curl http://127.0.0.1:5000/questions -X POST -H "Content-Type: application/json" -d '{"question":"Which country will host Cricket World Cup 2019?", "answer":"England", "category":6, "difficulty":4}'
  ```
  {
@@ -240,7 +240,7 @@ POST /questions
   POST /questions/search 
 * General:
     * Returns a list of question objects for whom the search term is a substring of the question, success value and total number of returned questions.
-* curl http://127.0.0.1:5000/books/15 -X POST -H "Content-Type: application/json" -d '{"searchTerm":"soccer"}' 
+* curl http://127.0.0.1:5000/questions/search -X POST -H "Content-Type: application/json" -d '{"searchTerm":"soccer"}' 
  ```
 { 
     "questions":[
